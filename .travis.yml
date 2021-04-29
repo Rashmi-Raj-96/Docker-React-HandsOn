@@ -1,0 +1,11 @@
+#super user level permission
+language: generic
+sudo: required
+services: 
+  - docker
+  
+ before_install:
+  - docker build -t test -f Dockerfile.dev .
+  
+script:
+  - docker run -e CI=true test npm run test
