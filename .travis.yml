@@ -1,4 +1,3 @@
-#super user level permission
 language: generic
 sudo: required
 services: 
